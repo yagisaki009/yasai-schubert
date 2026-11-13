@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# やさい もってって！ シューベルト v1（iOS 11.2以前のiPad用）
+index.html
+art.js
+music.js
+bg.png
+manifest.webmanifest
+icon-180.png
+icon-512.png
+
+NETWORK:
+*
