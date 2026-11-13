@@ -139,7 +139,29 @@ var bg = new Image(); bg.src = 'bg.png';
 var KINDS = {
   risu: { f: ['risu1', 'risu2'], w: 16, h: 14, speed: 64, bob: 3, fps: 9, head: [12, 5], sh: 's', weight: 4 },
   saru: { f: ['saru1', 'saru2'], w: 16, h: 14, speed: 54, bob: 2, fps: 8, head: [11, 1], sh: 's', weight: 4 },
-  kame: { f: ['kame1', 'kame2'], w: 20, h: 10, speed: 24, bob: 0, fps: 4, head: [7, 1], sh: 'm', weight: 2 }
+  kame: { f: ['kame1', 'kame2'], w: 20, h: 10, speed: 24, bob: 0, fps: 4, head: [7, 1], sh: 'm', weight: 2 },
+  /* いぬ・ねこ：かめより少し速い。やさいは頭の上に */
+  inu: { f: ['inu1', 'inu2'], w: 16, h: 12, speed: 31, bob: 1, fps: 6, head: [12, 2], sh: 's', weight: 3 },
+  neko: { f: ['neko1', 'neko2'], w: 16, h: 12, speed: 30, bob: 1, fps: 6, head: [12, 2], sh: 's', weight: 3 },
+  /* イノシシ：ずんずん走る（犬・猫より速め）。やさいは背中に */
+  inoshishi: { f: ['inoshishi1', 'inoshishi2'], w: 18, h: 12, speed: 44, bob: 1, fps: 8, head: [9, 1], sh: 'm', weight: 3 },
+  /* ひつじ・やぎ・アライグマ・キツネ・たぬき・おおかみ */
+  hitsuji: { f: ['hitsuji1', 'hitsuji2'], w: 18, h: 12, speed: 34, bob: 1, fps: 6, head: [7, 0], sh: 'm', weight: 2 },
+  yagi: { f: ['yagi1', 'yagi2'], w: 16, h: 14, speed: 40, bob: 1, fps: 7, head: [13, 2], sh: 's', weight: 2 },
+  araiguma: { f: ['araiguma1', 'araiguma2'], w: 16, h: 12, speed: 50, bob: 1, fps: 8, head: [12, 2], sh: 's', weight: 2 },
+  kitsune: { f: ['kitsune1', 'kitsune2'], w: 16, h: 13, speed: 56, bob: 1, fps: 9, head: [12, 3], sh: 's', weight: 2 },
+  tanuki: { f: ['tanuki1', 'tanuki2'], w: 20, h: 12, speed: 36, bob: 1, fps: 7, head: [16, 2], sh: 's', weight: 2 },
+  ookami: { f: ['ookami1', 'ookami2'], w: 16, h: 12, speed: 58, bob: 1, fps: 9, head: [12, 2], sh: 'm', weight: 2 },
+  /* 子ゾウ：のっしのっし（かめより少し速い）。やさいは背中に */
+  zou: { f: ['zou1', 'zou2'], w: 20, h: 13, speed: 28, bob: 1, fps: 5, head: [5, 0], sh: 'm', weight: 2 },
+  /* 人間の子ども：やさいは頭の上に */
+  kodomo: { f: ['kodomo1', 'kodomo2'], w: 13, h: 16, speed: 46, bob: 1, fps: 8, head: [6, 0], sh: 's', weight: 2 },
+  /* カバ：のっそり。やさいは背中に */
+  kaba: { f: ['kaba1', 'kaba2'], w: 20, h: 12, speed: 26, bob: 1, fps: 5, head: [7, 1], sh: 'm', weight: 2 },
+  /* 女の子：黒いロングヘア、ワンピース。やさいは頭の上に */
+  onnanoko: { f: ['onnanoko1', 'onnanoko2'], w: 13, h: 20, speed: 44, bob: 1, fps: 8, head: [6, 0], sh: 's', weight: 2 },
+  /* おさげの女の子 */
+  osage: { f: ['osage1', 'osage2'], w: 15, h: 20, speed: 42, bob: 1, fps: 8, head: [8, 0], sh: 's', weight: 2 }
 };
 var KIND_BAG = [];
 for (var kn in KINDS) if (KINDS.hasOwnProperty(kn)) for (var kw = 0; kw < KINDS[kn].weight; kw++) KIND_BAG.push(kn);
