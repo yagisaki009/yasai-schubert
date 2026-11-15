@@ -394,7 +394,7 @@ function drawHud() {
 /* ---------- 音（ぜんぶその場で合成。ファミコン・スーファミ風） ---------- */
 var AC = window.AudioContext || window.webkitAudioContext;
 var ctx = null, master = null, sfxBus = null, bgmBus = null, unlocked = false, noiseBuf = null;
-var VOLS = [0.35, 0.65, 1.0], VOL_ICON = ['🔈', '🔉', '🔊'], VOL_NAME = ['ちいさい', 'ふつう', 'おおきい'], volIdx = 1, bgmSel = V.firstSong || 'nohara';
+var VOLS = [0.35, 0.65, 1.0], VOL_ICON = ['🔈', '🔉', '🔊'], VOL_NAME = ['ちいさい', 'ふつう', 'おおきい'], volIdx = 1, bgmSel = V.firstSong || 'raimei';
 try { var sv = localStorage.getItem(KEY + '-vol'); if (sv !== null && VOLS[+sv] !== undefined) volIdx = +sv; } catch (e) {}
 try { var sb = localStorage.getItem(KEY + '-bgm'); if (sb === '0' || sb === 'off') bgmSel = 'off'; else if (sb) bgmSel = sb; } catch (e) {}
 function unlock() {
@@ -603,7 +603,7 @@ var BGM_NAME = { nohara: ['のはら', 'オリジナル'], k545: ['ピアノソ�
   queen: ['夜の女王のアリア', 'モーツァルト'], netsujo: ['ピアノソナタ「熱情」第3楽章', 'ベートーヴェン'], tell: ['ウィリアム・テル序曲 スイス軍の行進', 'ロッシーニ'], fuyu: ['四季より「冬」', 'ヴィヴァルディ'], kankan: ['天国と地獄', 'オッフェンバック'],
   kumabachi: ['熊蜂の飛行', 'リムスキー＝コルサコフ'], raimei: ['ポルカ「雷鳴と電光」', 'J.シュトラウス2世'], chopin: ['練習曲 Op.10-4', 'ショパン'], trepak: ['くるみ割り人形「トレパーク」', 'チャイコフスキー'], zapateado: ['サパテアード', 'サラサーテ'], nobara: ['野ばら', 'シューベルト'], serenade: ['セレナーデ（リスト編）', 'シューベルト'], masu: ['ピアノ五重奏曲「鱒」第4楽章', 'シューベルト'], gakkyo: ['楽興の時 第3番', 'シューベルト'], sokkyo899: ['即興曲 Op.90-3', 'シューベルト'], rosamunde: ['「ロザムンデ」間奏曲 第3番', 'シューベルト'], sokkyo935: ['即興曲 Op.142-3', 'シューベルト'], fugue: ['小フーガ ト短調', 'J.S.バッハ'], off: ['なし', ''] };
 if (V.songs) BGM_ORDER = V.songs.concat(['off']);
-if (bgmSel !== 'off' && (!SONGS[bgmSel] || BGM_ORDER.indexOf(bgmSel) < 0)) bgmSel = V.firstSong || 'nohara';
+if (bgmSel !== 'off' && (!SONGS[bgmSel] || BGM_ORDER.indexOf(bgmSel) < 0)) bgmSel = V.firstSong || 'raimei';
 var song = null, songPos = 0, songT0 = 0, songGain = null, bgmTimer = null;
 function songStart(name) {
   if (songGain) {
